@@ -1,9 +1,8 @@
-tempf= 80
 while True:
     print("temperature" + input.temperature(TemperatureUnit.FAHRENHEIT))
-    if tempf > 60:
-        light.set_all(light.rgb(255, 0, 0))
-    elif 70 < tempf > 40:
-        light.set_all(light.rgb(0, 255, 0))
+    if input.temperature(TemperatureUnit.FAHRENHEIT) > 80:
+        light.set_all(light.rgb(255, 255, 0))
+    elif input.temperature(TemperatureUnit.FAHRENHEIT) > 40:
+        light.set_all(light.rgb(255,0, 255))
     else:
         light.set_all(light.rgb(0, 0, 255))
